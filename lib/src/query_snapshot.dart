@@ -1,6 +1,9 @@
 part of algolia;
 
 class AlgoliaQuerySnapshot {
+  factory AlgoliaQuerySnapshot.fromJson(Algolia algolia, String index, Map<String, dynamic> json) =>
+      AlgoliaQuerySnapshot._(algolia, index, json);
+
   AlgoliaQuerySnapshot._(algolia, index, Map<String, dynamic> map)
       : algolia = algolia,
         index = index,
